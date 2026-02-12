@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarun Ragav R | Portfolio</title>
+    
+    <link rel="icon" type="image/png" href="favicon.png">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -14,10 +17,11 @@
                     fontFamily: { sans: ['Inter', 'sans-serif'] },
                     colors: {
                         bg: '#0a0a0a',
-                        card: '#171717',
+                        card: '#121212', /* Slightly darker card for contrast */
                         border: '#262626',
-                        accent: '#22c55e', 
-                        text: '#a3a3a3'
+                        accent: '#22c55e', /* Matrix Green */
+                        text: '#a3a3a3',
+                        textLight: '#d4d4d4'
                     }
                 }
             }
@@ -25,164 +29,234 @@
     </script>
     <style>
         body { background-color: #0a0a0a; color: #e5e5e5; }
-        .project-card:hover { transform: translateY(-5px); border-color: #22c55e; }
-        .nav-blur { backdrop-filter: blur(12px); background: rgba(10, 10, 10, 0.8); }
-        .btn-primary { background: #22c55e; color: black; font-weight: bold; padding: 0.5rem 1rem; border-radius: 9999px; transition: 0.3s; }
-        .btn-primary:hover { background: #16a34a; }
-        .btn-outline { border: 1px solid #262626; color: #e5e5e5; padding: 0.5rem 1rem; border-radius: 9999px; transition: 0.3s; }
-        .btn-outline:hover { border-color: #22c55e; color: #22c55e; }
+        /* Subtle glow on hover for cards */
+        .project-card:hover { transform: translateY(-5px); border-color: #22c55e; box-shadow: 0 10px 30px -10px rgba(34, 197, 94, 0.15); }
+        .nav-blur { backdrop-filter: blur(12px); background: rgba(10, 10, 10, 0.9); }
+        .btn-primary { background: #22c55e; color: black; font-weight: bold; padding: 0.75rem 1.5rem; border-radius: 9999px; transition: 0.3s; display: inline-flex; align-items: center; gap: 0.5rem;}
+        .btn-primary:hover { background: #16a34a; box-shadow: 0 0 15px rgba(34, 197, 94, 0.4); }
+        .btn-outline { border: 1px solid #262626; color: #e5e5e5; padding: 0.75rem 1.5rem; border-radius: 9999px; transition: 0.3s; }
+        .btn-outline:hover { border-color: #22c55e; color: #22c55e; bg: rgba(34, 197, 94, 0.05); }
+        /* Utilities for list spacing */
+        .prose ul { list-style-type: disc; padding-left: 1.25rem; margin-top: 1rem; }
+        .prose li { margin-bottom: 0.5rem; color: #a3a3a3; font-size: 0.95rem; }
+        .prose strong { color: #e5e5e5; font-weight: 600; }
     </style>
 </head>
-<body class="antialiased selection:bg-accent selection:text-black">
+<body class="antialiased selection:bg-accent selection:text-black font-sans">
 
-    <nav class="fixed w-full z-50 nav-blur border-b border-border">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-xl font-bold tracking-tight text-white">
-                TARUN RAGAV <span class="text-accent">R.</span>
+    <nav class="fixed w-full z-50 nav-blur border-b border-border/50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-xl font-extrabold tracking-tight text-white">
+                <span class="text-accent">T</span>ARUN <span class="text-accent">R</span>AGAV <span class="text-accent">R.</span>
             </div>
-            <div class="hidden md:flex space-x-8 text-sm font-medium text-text">
-                <a href="#about" class="hover:text-white transition">About</a>
-                <a href="#projects" class="hover:text-white transition">Projects</a>
-                <a href="#contact" class="text-accent hover:text-white transition">Contact</a>
+            <div class="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-widest text-text">
+                <a href="#about" class="hover:text-accent transition">About</a>
+                <a href="#projects" class="hover:text-accent transition">Projects</a>
+                <a href="mailto:tarunragavravindran@gmail.com" class="text-accent/80 hover:text-accent transition">Contact</a>
             </div>
         </div>
     </nav>
 
-    <header class="pt-48 pb-32 max-w-6xl mx-auto px-6">
-        <div class="max-w-3xl">
-            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-border bg-card mb-6">
-                <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
-                <span class="text-xs font-mono text-accent">OPEN TO WORK</span>
+    <header class="pt-36 pb-24 max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-center border-b border-border/30">
+        <div class="md:col-span-7 order-2 md:order-1">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-accent/20 bg-accent/5 mb-8">
+                <span class="w-2 h-2 rounded-full bg-accent animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.8)]"></span>
+                <span class="text-xs font-bold tracking-wider text-accent uppercase">CSE Undergraduate & Innovator</span>
             </div>
-            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight leading-tight">
-                Engineering <br>
-                <span class="text-accent">Strategic Solutions.</span>
+            <h1 class="text-5xl md:text-7xl font-black text-white mb-8 tracking-tighter leading-[1.1]">
+                ENGINEERING <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-emerald-400">STRATEGIC IMPACT.</span>
             </h1>
-            <p class="text-xl text-text mb-10 leading-relaxed max-w-2xl">
-                I am <b>Tarun Ragav R</b>, a CSE Undergraduate and <b>MyGov Campus Ambassador</b>. 
-                I build full-stack applications and use Data Analytics to solve national-scale problems.
+            <p class="text-xl text-textLight mb-10 leading-relaxed max-w-2xl">
+                I am <strong class="text-white">Tarun Ragav R</strong>, a <b>MyGov Campus Ambassador</b> and full-stack developer. 
+                I bridge the gap between complex data analytics and real-world governance challenges to build scalable, national-level solutions.
             </p>
             <div class="flex flex-wrap gap-4">
-                <a href="#projects" class="btn-primary">View Proof of Work</a>
-                <a href="mailto:tarunragavravindran@gmail.com" class="btn-outline">Email Me</a>
+                <a href="#projects" class="btn-primary">
+                    View Proof of Work <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                </a>
+                <a href="mailto:tarunragavravindran@gmail.com" class="btn-outline font-bold">
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+        <div class="md:col-span-5 order-1 md:order-2 flex justify-center relative">
+             <div class="absolute inset-0 bg-accent/20 blur-3xl rounded-full transform translate-x-6 translate-y-6 -z-10 w-3/4 h-3/4 mx-auto"></div>
+             <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-3xl overflow-hidden border-2 border-accent/30 shadow-2xl z-10 rotate-3 hover:rotate-0 transition duration-500">
+                <img src="profile.jpg" alt="Tarun Ragav R" class="w-full h-full object-cover scale-110 hover:scale-100 transition duration-500">
             </div>
         </div>
     </header>
 
-    <section id="projects" class="py-32 max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-white mb-16">Featured Projects & Proofs</h2>
-
-        <div class="grid md:grid-cols-2 gap-8">
-            
-            <div class="project-card group bg-card border border-border p-8 rounded-2xl transition duration-300">
-                <div class="flex justify-between items-start mb-6">
-                    <div class="p-3 bg-border rounded-lg text-2xl"><i class="fas fa-users-cog text-white"></i></div>
-                    <span class="text-xs font-mono text-accent border border-accent/30 bg-accent/10 px-2 py-1 rounded">Flutter App</span>
-                </div>
-                <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-accent transition">Jan-Seva Connect (Netritva)</h3>
-                <p class="text-text mb-4 text-sm leading-relaxed">
-                    <b>Political CRM Super-App:</b> Designed a hierarchy-based mobile app connecting State Command to Booth Workers. Features include <b>Role-Based Access Control</b>, Grievance Redressal, and a "Seva Points" gamification engine.
-                </p>
-                <div class="flex gap-2 mt-4">
-                    <span class="text-xs border border-border px-2 py-1 rounded text-text">Flutter (Dart)</span>
-                    <span class="text-xs border border-border px-2 py-1 rounded text-text">GovTech</span>
-                    <span class="text-xs border border-border px-2 py-1 rounded text-text">Gamification</span>
-                </div>
-            </div>
-
-            <div class="project-card group bg-card border border-border p-8 rounded-2xl transition duration-300">
-                <div class="flex justify-between items-start mb-6">
-                    <div class="p-3 bg-border rounded-lg text-2xl"><i class="fas fa-fingerprint text-white"></i></div>
-                    <span class="text-xs font-mono text-accent border border-accent/30 bg-accent/10 px-2 py-1 rounded">2026</span>
-                </div>
-                <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-accent transition">UIDAI Strategic Analysis</h3>
-                <p class="text-text mb-4 text-sm leading-relaxed">
-                    <b>Hackathon Finalist:</b> Analyzed 1.3 Billion enrollment records. Identified <b>14 "Red List" districts</b> with >105% saturation and projected a <b>₹500 Crore annual financial leakage</b>.
-                </p>
-                <div class="flex flex-wrap gap-3 mt-6">
-                    <a href="UIDAI-Hackathon-FinalReport.pdf" target="_blank" class="text-xs flex items-center gap-2 bg-red-900/20 text-red-400 px-3 py-2 rounded-lg hover:bg-red-900/40 transition border border-red-900/50">
-                        <i class="fas fa-file-pdf"></i> Read Report
-                    </a>
-                    <a href="UIDAI%20REC.mp4" target="_blank" class="text-xs flex items-center gap-2 bg-blue-900/20 text-blue-400 px-3 py-2 rounded-lg hover:bg-blue-900/40 transition border border-blue-900/50">
-                        <i class="fas fa-play-circle"></i> Watch Analysis
-                    </a>
-                </div>
-            </div>
-
-            <div class="project-card group bg-card border border-border p-8 rounded-2xl transition duration-300">
-                <div class="flex justify-between items-start mb-6">
-                    <div class="p-3 bg-border rounded-lg text-2xl"><i class="fas fa-chess-knight text-white"></i></div>
-                </div>
-                <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-accent transition">InteractUp STRAT-X</h3>
-                <p class="text-text mb-4 text-sm leading-relaxed">
-                    Developed a 50-page strategy document for a national competition. Conducted market research and business logic formulation for Stage 1 submission.
-                </p>
-                <div class="flex gap-2 mt-4">
-                    <span class="text-xs border border-border px-2 py-1 rounded text-text">Business Strategy</span>
-                    <span class="text-xs border border-border px-2 py-1 rounded text-text">Research</span>
-                </div>
-            </div>
-
-            <div class="project-card group bg-card border border-border p-8 rounded-2xl transition duration-300">
-                <div class="flex justify-between items-start mb-6">
-                    <div class="p-3 bg-border rounded-lg text-2xl"><i class="fas fa-brain text-white"></i></div>
-                </div>
-                <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-accent transition">Ignite Knights x RapidMiner</h3>
-                <p class="text-text mb-4 text-sm leading-relaxed">
-                    Leveraged Altair RapidMiner for predictive modeling. Created data workflows to solve complex societal problem statements without manual coding.
-                </p>
-                <div class="flex gap-2 mt-4">
-                    <span class="text-xs border border-border px-2 py-1 rounded text-text">AI/ML</span>
-                    <span class="text-xs border border-border px-2 py-1 rounded text-text">No-Code AI</span>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="about" class="py-20 bg-card border-y border-border">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    <section id="projects" class="py-32 max-w-7xl mx-auto px-6 relative z-20">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
             <div>
-                <h2 class="text-3xl font-bold text-white mb-6">About Me</h2>
-                <p class="text-text leading-relaxed mb-6">
+                <h2 class="text-4xl font-black text-white mb-2">FEATURED WORK</h2>
+                <p class="text-lg text-text">A deep dive into my technical projects and national-level contributions.</p>
+            </div>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-10">
+            
+            <div class="project-card group bg-card border border-border p-8 rounded-3xl transition duration-300 flex flex-col h-full">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="p-4 bg-border/50 rounded-2xl text-3xl text-accent"><i class="fas fa-users-cog"></i></div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-accent border border-accent/30 bg-accent/5 px-3 py-1.5 rounded-lg">Flagship Project</span>
+                </div>
+                <h3 class="text-2xl font-extrabold text-white mb-4 group-hover:text-accent transition">Jan-Seva Connect (Netritva)</h3>
+                <div class="prose mb-8 flex-grow">
+                    <p class="text-textLight font-medium leading-relaxed mb-4">
+                        A comprehensive <b>Political CRM & Party Management Super-App</b> designed to digitalize the entire political hierarchy from State President down to Booth Workers.
+                    </p>
+                    <strong class="text-white block mb-2">Key Technical Features:</strong>
+                    <ul>
+                        <li><b>6-Level RBAC:</b> Implemented complex Role-Based Access Control depending on organizational hierarchy (High Command vs. Grassroots view).</li>
+                        <li><b>Gamification Engine:</b> Developed a "Seva Points" logic system that awards points and digital badges for verified task completion to incentivize groundwork.</li>
+                        <li><b>Omnichannel Grievance Redressal:</b> Simulation of intake via WhatsApp/Voice, with automated routing and geo-tagged proof-of-work upload.</li>
+                        <li><b>State Management Simulation:</b> Utilized the <code>Provider</code> package in Flutter to mock real-time database interactions and state updates across screens.</li>
+                    </ul>
+                </div>
+                <div class="flex flex-wrap gap-2 mt-auto pt-6 border-t border-border/50">
+                    <span class="text-xs font-bold border border-border px-3 py-1.5 rounded-lg text-textLight bg-bg">Flutter (Dart)</span>
+                    <span class="text-xs font-bold border border-border px-3 py-1.5 rounded-lg text-textLight bg-bg">GovTech Architecture</span>
+                    <span class="text-xs font-bold border border-border px-3 py-1.5 rounded-lg text-textLight bg-bg">Complex State Management</span>
+                </div>
+            </div>
+
+            <div class="project-card group bg-card border border-border p-8 rounded-3xl transition duration-300 flex flex-col h-full">
+                 <div class="flex justify-between items-start mb-6">
+                    <div class="p-4 bg-border/50 rounded-2xl text-3xl text-accent"><i class="fas fa-fingerprint"></i></div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-accent border border-accent/30 bg-accent/5 px-3 py-1.5 rounded-lg">Hackathon Finalist</span>
+                </div>
+                <h3 class="text-2xl font-extrabold text-white mb-4 group-hover:text-accent transition">UIDAI Strategic Analysis</h3>
+                <div class="prose mb-8 flex-grow">
+                     <p class="text-textLight font-medium leading-relaxed mb-4">
+                        Conducted a high-level data analysis of <b>1.3 Billion Aadhaar enrollment records</b> to identify demographic anomalies and propose strategic policy interventions for UIDAI.
+                    </p>
+                     <strong class="text-white block mb-2">Key Analytical Insights:</strong>
+                    <ul>
+                        <li><b>Anomaly Detection:</b> Identified 14 "Red List" districts exhibiting statistically improbable saturation levels (>105%), indicating potential data quality issues or migration trends.</li>
+                        <li><b>Financial Impact Modeling:</b> Projected a potential <b>₹500 Crore annual financial leakage</b> due to delayed mandatory biometric updates in the 5-15 age bracket.</li>
+                        <li><b>Strategic Proposal:</b> Recommended a "Born-Digital" integration strategy with hospital birth registries to automate neonatal enrollment and improve data freshness.</li>
+                        <li><b>Tools Used:</b> Utilized Python (Pandas, Matplotlib) for data cleaning and statistical analysis of massive datasets.</li>
+                    </ul>
+                </div>
+                <div class="flex flex-wrap gap-3 mt-auto pt-6 border-t border-border/50">
+                    <a href="UIDAI-Hackathon-FinalReport.pdf" target="_blank" class="text-xs font-bold flex items-center gap-2 bg-red-500/10 text-red-400 px-4 py-2 rounded-lg hover:bg-red-500/20 transition border border-red-500/30">
+                        <i class="fas fa-file-pdf"></i> Read Official Report
+                    </a>
+                    <a href="UIDAI%20REC.mp4" target="_blank" class="text-xs font-bold flex items-center gap-2 bg-blue-500/10 text-blue-400 px-4 py-2 rounded-lg hover:bg-blue-500/20 transition border border-blue-500/30">
+                        <i class="fas fa-play-circle"></i> Watch Analysis Video
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card group bg-card border border-border p-8 rounded-3xl transition duration-300 flex flex-col h-full">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="p-4 bg-border/50 rounded-2xl text-3xl text-accent"><i class="fas fa-chess-knight"></i></div>
+                </div>
+                <h3 class="text-2xl font-extrabold text-white mb-4 group-hover:text-accent transition">InteractUp STRAT-X Competition</h3>
+                <div class="prose mb-8 flex-grow">
+                    <p class="text-textLight font-medium leading-relaxed mb-4">
+                        Led the strategy team to develop a comprehensive, 50-page business strategy document for a national-level consulting competition.
+                    </p>
+                     <strong class="text-white block mb-2">Contributions & Methodologies:</strong>
+                    <ul>
+                        <li><b>Market Research:</b> Conducted deep-dive secondary research into industry trends, competitor analysis, and regulatory landscapes.</li>
+                        <li><b>Strategic Frameworks:</b> Applied PESTLE and SWOT analysis to formulate actionable business logic for the Stage 1 submission.</li>
+                        <li><b>Documentation:</b> structured complex business ideas into a professional, compelling narrative for executive evaluation.</li>
+                    </ul>
+                </div>
+                <div class="flex gap-2 mt-auto pt-6 border-t border-border/50">
+                    <span class="text-xs font-bold border border-border px-3 py-1.5 rounded-lg text-textLight bg-bg">Business Strategy</span>
+                    <span class="text-xs font-bold border border-border px-3 py-1.5 rounded-lg text-textLight bg-bg">Market Research</span>
+                </div>
+            </div>
+
+            <div class="project-card group bg-card border border-border p-8 rounded-3xl transition duration-300 flex flex-col h-full">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="p-4 bg-border/50 rounded-2xl text-3xl text-accent"><i class="fas fa-brain"></i></div>
+                </div>
+                <h3 class="text-2xl font-extrabold text-white mb-4 group-hover:text-accent transition">Ignite Knights x RapidMiner</h3>
+                <div class="prose mb-8 flex-grow">
+                    <p class="text-textLight font-medium leading-relaxed mb-4">
+                        Leveraged the Altair RapidMiner platform to build predictive models for complex societal problem statements in a No-Code environment.
+                    </p>
+                     <strong class="text-white block mb-2">Key Learnings:</strong>
+                    <ul>
+                        <li><b>Visual Data Workflows:</b> Designed end-to-end data pipelines including data loading, cleaning, transformation, and modeling without manual coding.</li>
+                        <li><b>Predictive Modeling:</b> Applied machine learning algorithms (e.g., Decision Trees, Logistic Regression) to identify patterns and forecast outcomes.</li>
+                        <li><b>Model Evaluation:</b> Analyzed confusion matrices and ROC curves to validate model performance and accuracy.</li>
+                    </ul>
+                </div>
+                <div class="flex gap-2 mt-auto pt-6 border-t border-border/50">
+                    <span class="text-xs font-bold border border-border px-3 py-1.5 rounded-lg text-textLight bg-bg">AI/ML</span>
+                    <span class="text-xs font-bold border border-border px-3 py-1.5 rounded-lg text-textLight bg-bg">No-Code Analytics</span>
+                    <span class="text-xs font-bold border border-border px-3 py-1.5 rounded-lg text-textLight bg-bg">Altair</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about" class="py-32 bg-card border-y border-border/50 relative">
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+            <div class="absolute top-1/4 left-10 w-64 h-64 bg-accent/5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-1/4 right-10 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center relative z-10">
+            <div>
+                <h2 class="text-4xl font-black text-white mb-8">THE PERSON BEHIND THE CODE.</h2>
+                <p class="text-lg text-textLight leading-relaxed mb-8 font-medium">
                     I am a first-year undergraduate passionate about the intersection of <b>Technology and Governance</b>. 
-                    I focus on using technical tools like Python and RapidMiner to create actionable policy insights.
+                    Unlike typical developers, I focus on how technical tools like Python, Flutter, and RapidMiner can create actionable policy insights and streamline public administration.
                 </p>
-                <div class="bg-black/40 p-6 rounded-xl border border-border relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-2 opacity-10"><i class="fas fa-certificate text-6xl"></i></div>
-                    <h3 class="text-white font-bold mb-1">MyGov Campus Ambassador</h3>
-                    <p class="text-sm text-text mb-4">Official Representative for Sri Sai Ram Engineering College.</p>
-                    <a href="Screenshot%202026-02-12%20220255.png" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-accent hover:underline">
-                        <i class="fas fa-check-circle"></i> View Official Badge Verification
+                <div class="bg-bg/80 backdrop-blur-sm p-8 rounded-3xl border border-accent/20 relative overflow-hidden group hover:border-accent/50 transition duration-500">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 text-accent group-hover:opacity-20 transition__"><i class="fas fa-certificate text-7xl"></i></div>
+                    <h3 class="text-2xl font-extrabold text-white mb-2">MyGov Campus Ambassador</h3>
+                    <p class="text-textLight mb-6 font-medium">Official Representative for Sri Sai Ram Engineering College, bridging the gap between government initiatives and student participation.</p>
+                    
+                    <a href="Screenshot%202026-02-12%20220255.png" target="_blank" class="inline-flex items-center gap-3 text-sm font-bold text-accent hover:underline bg-accent/10 px-4 py-2 rounded-full border border-accent/20 hover:bg-accent/20 transition">
+                        <i class="fas fa-check-circle text-lg"></i> View Official Badge Verification
                     </a>
                 </div>
             </div>
             
-            <div class="space-y-6">
-                <div class="flex gap-4 p-4 hover:bg-white/5 rounded-xl transition">
-                    <div class="text-accent font-mono text-sm pt-1">2026</div>
+            <div class="space-y-4">
+                <h3 class="text-xl font-bold text-white mb-6 tracking-widest uppercase">Key Roles & Timeline</h3>
+                <div class="flex gap-6 p-6 bg-bg/50 border border-border/50 rounded-3xl hover:border-accent/40 hover:bg-bg/80 transition duration-300">
+                    <div class="text-accent font-black text-lg pt-1 tracking-wider">2026</div>
                     <div>
-                        <div class="text-white font-bold">Strategy Lead</div>
-                        <div class="text-sm text-text">InteractUp STRAT-X Competition</div>
+                        <div class="text-white font-extrabold text-xl mb-1">Strategy Lead</div>
+                        <div class="text-sm text-textLight font-bold uppercase tracking-wider mb-2">InteractUp STRAT-X Competition</div>
+                         <p class="text-sm text-text">Spearheaded business logic formulation and documentation for national-level consulting approach.</p>
                     </div>
                 </div>
-                <div class="flex gap-4 p-4 hover:bg-white/5 rounded-xl transition">
-                    <div class="text-accent font-mono text-sm pt-1">2025</div>
+                 <div class="flex gap-6 p-6 bg-bg/50 border border-border/50 rounded-3xl hover:border-accent/40 hover:bg-bg/80 transition duration-300">
+                    <div class="text-accent font-black text-lg pt-1 tracking-wider">2025</div>
                     <div>
-                        <div class="text-white font-bold">Research Participant</div>
-                        <div class="text-sm text-text">SIRD Immersion Program (LSDGs)</div>
+                        <div class="text-white font-extrabold text-xl mb-1">Research Participant</div>
+                        <div class="text-sm text-textLight font-bold uppercase tracking-wider mb-2">SIRD Immersion Program (LSDGs)</div>
+                        <p class="text-sm text-text">Conducted field research on Localization of Sustainable Development Goals in rural districts.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="contact" class="py-24 max-w-6xl mx-auto px-6 text-center">
-        <h2 class="text-4xl md:text-5xl font-bold text-white mb-8">Let's work together.</h2>
-        <a href="mailto:tarunragavravindran@gmail.com" class="text-xl md:text-2xl text-text hover:text-white transition">
+    <footer id="contact" class="py-32 max-w-7xl mx-auto px-6 text-center relative overflow-hidden">
+         <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_bottom,_var(--tw-gradient-stops))] from-accent/10 via-transparent to-transparent"></div>
+        <h2 class="text-5xl md:text-7xl font-black text-white mb-10 tracking-tighter">LET'S BUILD THE FUTURE.</h2>
+        <a href="mailto:tarunragavravindran@gmail.com" class="text-2xl md:text-4xl font-bold text-textLight hover:text-accent transition border-b-2 border-transparent hover:border-accent pb-2">
             tarunragavravindran@gmail.com
         </a>
-        <p class="text-sm text-zinc-600 mt-12">© 2026 Tarun Ragav R. All Rights Reserved.</p>
+        <div class="flex justify-center gap-8 mt-16 mb-16">
+             <a href="#" class="w-14 h-14 flex items-center justify-center rounded-full bg-card border border-border text-textLight text-2xl hover:text-accent hover:border-accent hover:-translate-y-2 transition duration-300"><i class="fab fa-linkedin-in"></i></a>
+             <a href="#" class="w-14 h-14 flex items-center justify-center rounded-full bg-card border border-border text-textLight text-2xl hover:text-accent hover:border-accent hover:-translate-y-2 transition duration-300"><i class="fab fa-github"></i></a>
+             <a href="mailto:tarunragavravindran@gmail.com" class="w-14 h-14 flex items-center justify-center rounded-full bg-card border border-border text-textLight text-2xl hover:text-accent hover:border-accent hover:-translate-y-2 transition duration-300"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p class="text-sm text-zinc-600 font-bold tracking-wider uppercase">© 2026 Tarun Ragav R. All Rights Reserved.</p>
     </footer>
 
 </body>
