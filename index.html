@@ -13,11 +13,11 @@
                 extend: {
                     fontFamily: { sans: ['Inter', 'sans-serif'] },
                     colors: {
-                        bg: '#0a0a0a',      /* Deep Black Background */
-                        card: '#171717',    /* Slightly lighter for cards */
-                        border: '#262626',  /* Subtle borders */
-                        accent: '#22c55e',  /* Matrix Green Accent */
-                        text: '#a3a3a3'     /* Muted Text */
+                        bg: '#0a0a0a',
+                        card: '#171717',
+                        border: '#262626',
+                        accent: '#22c55e', 
+                        text: '#a3a3a3'
                     }
                 }
             }
@@ -27,6 +27,10 @@
         body { background-color: #0a0a0a; color: #e5e5e5; }
         .project-card:hover { transform: translateY(-5px); border-color: #22c55e; }
         .nav-blur { backdrop-filter: blur(12px); background: rgba(10, 10, 10, 0.8); }
+        .btn-primary { background: #22c55e; color: black; font-weight: bold; padding: 0.5rem 1rem; border-radius: 9999px; transition: 0.3s; }
+        .btn-primary:hover { background: #16a34a; }
+        .btn-outline { border: 1px solid #262626; color: #e5e5e5; padding: 0.5rem 1rem; border-radius: 9999px; transition: 0.3s; }
+        .btn-outline:hover { border-color: #22c55e; color: #22c55e; }
     </style>
 </head>
 <body class="antialiased selection:bg-accent selection:text-black">
@@ -51,69 +55,57 @@
                 <span class="text-xs font-mono text-accent">OPEN TO WORK</span>
             </div>
             <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight leading-tight">
-                Computer Science <br>
-                <span class="text-accent">Undergraduate.</span>
+                Engineering <br>
+                <span class="text-accent">Strategic Solutions.</span>
             </h1>
             <p class="text-xl text-text mb-10 leading-relaxed max-w-2xl">
-                I am <b>Tarun Ragav R</b>, a B.E. CSE student and <b>MyGov Campus Ambassador</b>. 
-                I specialize in solving societal problems using Data Analytics, AI Strategy, and Prompt Engineering.
+                I am <b>Tarun Ragav R</b>, a CSE Undergraduate and <b>MyGov Campus Ambassador</b>. 
+                I use Data Analytics to solve national-scale problems, from Aadhaar saturation to sustainable development.
             </p>
             <div class="flex flex-wrap gap-4">
-                <a href="#projects" class="bg-white text-black px-8 py-3 rounded-full font-bold hover:bg-accent transition">
-                    View My Work
-                </a>
-                <a href="mailto:tarunragavravindran@gmail.com" class="border border-border px-8 py-3 rounded-full font-bold hover:border-white transition">
-                    Email Me
-                </a>
+                <a href="#projects" class="btn-primary">View Proof of Work</a>
+                <a href="mailto:tarunragavravindran@gmail.com" class="btn-outline">Email Me</a>
             </div>
         </div>
     </header>
 
-    <div class="border-y border-border bg-card overflow-hidden py-4">
-        <div class="max-w-6xl mx-auto px-6 flex justify-between text-sm font-mono text-text">
-            <span>PYTHON</span>
-            <span>DATA ANALYTICS</span>
-            <span>RAPIDMINER</span>
-            <span>GEMINI AI</span>
-            <span>STRATEGY</span>
-            <span>C++</span>
-        </div>
-    </div>
-
     <section id="projects" class="py-32 max-w-6xl mx-auto px-6">
-        <div class="flex justify-between items-end mb-16">
-            <h2 class="text-3xl font-bold text-white">Selected Projects</h2>
-            <a href="#" class="text-sm text-accent hover:underline">View GitHub -></a>
-        </div>
+        <h2 class="text-3xl font-bold text-white mb-16">Featured Projects & Proofs</h2>
 
         <div class="grid md:grid-cols-2 gap-8">
             
             <div class="project-card group bg-card border border-border p-8 rounded-2xl transition duration-300">
                 <div class="flex justify-between items-start mb-6">
                     <div class="p-3 bg-border rounded-lg text-2xl"><i class="fas fa-fingerprint text-white"></i></div>
-                    <a href="#" class="text-text hover:text-white"><i class="fas fa-external-link-alt"></i></a>
+                    <span class="text-xs font-mono text-accent border border-accent/30 bg-accent/10 px-2 py-1 rounded">2026</span>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-accent transition">UIDAI Aadhaar Analysis</h3>
-                <p class="text-text mb-6 text-sm leading-relaxed">
-                    Analyzed societal trends in Aadhaar enrolment and updates. Used data analytics to uncover demographic patterns for the UIDAI Hackathon.
+                <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-accent transition">UIDAI Strategic Analysis</h3>
+                <p class="text-text mb-4 text-sm leading-relaxed">
+                    <b>Hackathon 2026 Finalist:</b> Analyzed 1.3 Billion enrollment records. [cite_start]Identified <b>14 "Red List" districts</b> with >105% saturation and projected a <b>₹500 Crore annual financial leakage</b>[cite: 37, 177].
                 </p>
-                <div class="flex gap-2">
-                    <span class="text-xs border border-border px-2 py-1 rounded text-text">Python</span>
-                    <span class="text-xs border border-border px-2 py-1 rounded text-text">Data Science</span>
+                <div class="flex flex-wrap gap-3 mt-6">
+                    <a href="UIDAI-Hackathon-FinalReport.pdf" target="_blank" class="text-xs flex items-center gap-2 bg-red-900/20 text-red-400 px-3 py-2 rounded-lg hover:bg-red-900/40 transition border border-red-900/50">
+                        <i class="fas fa-file-pdf"></i> Read Report
+                    </a>
+                    <a href="UIDAI%20REC.mp4" target="_blank" class="text-xs flex items-center gap-2 bg-blue-900/20 text-blue-400 px-3 py-2 rounded-lg hover:bg-blue-900/40 transition border border-blue-900/50">
+                        <i class="fas fa-play-circle"></i> Watch Analysis
+                    </a>
+                    <a href="https://ai.studio/apps/drive/1p4il5O-wmLs4XdD_4u-rt1SwZy44atqO" target="_blank" class="text-xs flex items-center gap-2 bg-zinc-800 text-zinc-300 px-3 py-2 rounded-lg hover:bg-zinc-700 transition">
+                        <i class="fas fa-code"></i> View Code
+                    </a>
                 </div>
             </div>
 
             <div class="project-card group bg-card border border-border p-8 rounded-2xl transition duration-300">
                 <div class="flex justify-between items-start mb-6">
                     <div class="p-3 bg-border rounded-lg text-2xl"><i class="fas fa-chess-knight text-white"></i></div>
-                    <a href="#" class="text-text hover:text-white"><i class="fas fa-external-link-alt"></i></a>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-accent transition">InteractUp STRAT-X</h3>
-                <p class="text-text mb-6 text-sm leading-relaxed">
-                    Developed a comprehensive 50-page strategy document for a national competition, focusing on market research and business logic.
+                <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-accent transition">InteractUp STRAT-X</h3>
+                <p class="text-text mb-4 text-sm leading-relaxed">
+                    Developed a 50-page strategy document for a national competition. Conducted market research and business logic formulation for Stage 1 submission.
                 </p>
-                <div class="flex gap-2">
-                    <span class="text-xs border border-border px-2 py-1 rounded text-text">Strategy</span>
+                <div class="flex gap-2 mt-4">
+                    <span class="text-xs border border-border px-2 py-1 rounded text-text">Business Strategy</span>
                     <span class="text-xs border border-border px-2 py-1 rounded text-text">Research</span>
                 </div>
             </div>
@@ -121,30 +113,14 @@
             <div class="project-card group bg-card border border-border p-8 rounded-2xl transition duration-300">
                 <div class="flex justify-between items-start mb-6">
                     <div class="p-3 bg-border rounded-lg text-2xl"><i class="fas fa-brain text-white"></i></div>
-                    <a href="#" class="text-text hover:text-white"><i class="fas fa-external-link-alt"></i></a>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-accent transition">Ignite Knights x RapidMiner</h3>
-                <p class="text-text mb-6 text-sm leading-relaxed">
-                    Leveraged Altair RapidMiner for predictive modeling. Created data workflows to solve contest problem statements effectively.
+                <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-accent transition">Ignite Knights x RapidMiner</h3>
+                <p class="text-text mb-4 text-sm leading-relaxed">
+                    Leveraged Altair RapidMiner for predictive modeling. Created data workflows to solve complex societal problem statements without manual coding.
                 </p>
-                <div class="flex gap-2">
+                <div class="flex gap-2 mt-4">
                     <span class="text-xs border border-border px-2 py-1 rounded text-text">AI/ML</span>
-                    <span class="text-xs border border-border px-2 py-1 rounded text-text">RapidMiner</span>
-                </div>
-            </div>
-
-            <div class="project-card group bg-card border border-border p-8 rounded-2xl transition duration-300">
-                <div class="flex justify-between items-start mb-6">
-                    <div class="p-3 bg-border rounded-lg text-2xl"><i class="fas fa-chart-line text-white"></i></div>
-                    <a href="#" class="text-text hover:text-white"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-accent transition">IPL Data Analysis</h3>
-                <p class="text-text mb-6 text-sm leading-relaxed">
-                    Statistical analysis of cricket performance data to build "Best 11" teams and predict fantasy league outcomes.
-                </p>
-                <div class="flex gap-2">
-                    <span class="text-xs border border-border px-2 py-1 rounded text-text">Statistics</span>
-                    <span class="text-xs border border-border px-2 py-1 rounded text-text">Sports Analytics</span>
+                    <span class="text-xs border border-border px-2 py-1 rounded text-text">No-Code AI</span>
                 </div>
             </div>
 
@@ -152,33 +128,37 @@
     </section>
 
     <section id="about" class="py-20 bg-card border-y border-border">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
             <div>
                 <h2 class="text-3xl font-bold text-white mb-6">About Me</h2>
                 <p class="text-text leading-relaxed mb-6">
                     I am a first-year undergraduate passionate about the intersection of <b>Technology and Governance</b>. 
-                    As a MyGov Campus Ambassador, I lead digital initiatives at Sri Sai Ram Engineering College.
+                    I focus on using technical tools like Python and RapidMiner to create actionable policy insights.
                 </p>
-                <p class="text-text leading-relaxed">
-                    I am actively learning Stock Market Trading (F&O), AI Prompt Engineering, and Full Stack Development.
-                </p>
+                <div class="bg-black/40 p-6 rounded-xl border border-border relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-2 opacity-10"><i class="fas fa-certificate text-6xl"></i></div>
+                    <h3 class="text-white font-bold mb-1">MyGov Campus Ambassador</h3>
+                    <p class="text-sm text-text mb-4">Official Representative for Sri Sai Ram Engineering College.</p>
+                    
+                    <a href="Screenshot%202026-02-12%20220255.png" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-accent hover:underline">
+                        <i class="fas fa-check-circle"></i> View Official Badge Verification
+                    </a>
+                </div>
             </div>
-            <div>
-                <h3 class="text-xl font-bold text-white mb-6">Experience</h3>
-                <div class="space-y-6">
-                    <div class="flex gap-4">
-                        <div class="text-accent font-mono text-sm pt-1">2026</div>
-                        <div>
-                            <div class="text-white font-bold">MyGov Campus Ambassador</div>
-                            <div class="text-sm text-text">Sri Sai Ram Engineering College</div>
-                        </div>
+            
+            <div class="space-y-6">
+                <div class="flex gap-4 p-4 hover:bg-white/5 rounded-xl transition">
+                    <div class="text-accent font-mono text-sm pt-1">2026</div>
+                    <div>
+                        <div class="text-white font-bold">Strategy Lead</div>
+                        <div class="text-sm text-text">InteractUp STRAT-X Competition</div>
                     </div>
-                    <div class="flex gap-4">
-                        <div class="text-accent font-mono text-sm pt-1">2025</div>
-                        <div>
-                            <div class="text-white font-bold">SIRD Immersion Program</div>
-                            <div class="text-sm text-text">State Institute of Rural Development</div>
-                        </div>
+                </div>
+                <div class="flex gap-4 p-4 hover:bg-white/5 rounded-xl transition">
+                    <div class="text-accent font-mono text-sm pt-1">2025</div>
+                    <div>
+                        <div class="text-white font-bold">Research Participant</div>
+                        <div class="text-sm text-text">SIRD Immersion Program (LSDGs)</div>
                     </div>
                 </div>
             </div>
@@ -187,18 +167,14 @@
 
     <footer id="contact" class="py-24 max-w-6xl mx-auto px-6 text-center">
         <h2 class="text-4xl md:text-5xl font-bold text-white mb-8">Let's work together.</h2>
-        <a href="mailto:tarunragavravindran@gmail.com" class="inline-block text-2xl md:text-3xl text-text hover:text-accent border-b-2 border-transparent hover:border-accent transition pb-2 mb-12">
+        <a href="mailto:tarunragavravindran@gmail.com" class="text-xl md:text-2xl text-text hover:text-white transition">
             tarunragavravindran@gmail.com
         </a>
-        
-        <div class="flex justify-center space-x-8 mb-12">
-            <a href="#" class="text-2xl text-text hover:text-white"><i class="fab fa-linkedin"></i></a>
-            <a href="#" class="text-2xl text-text hover:text-white"><i class="fab fa-github"></i></a>
-            <a href="#" class="text-2xl text-text hover:text-white"><i class="fab fa-twitter"></i></a>
-        </div>
-        
-        <p class="text-sm text-zinc-600">© 2026 Tarun Ragav R. All Rights Reserved.</p>
+        <p class="text-sm text-zinc-600 mt-12">© 2026 Tarun Ragav R. All Rights Reserved.</p>
     </footer>
+
+</body>
+</html>
 
 </body>
 </html>
